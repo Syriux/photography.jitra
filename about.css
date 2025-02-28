@@ -614,3 +614,23 @@ a {
     font-size: 15px;
   }
 }
+
+.prev-button {
+            background-color: black;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .prev-button a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .prev-button:hover {
+            background-color: #333;
+        }
