@@ -27,7 +27,7 @@ a {
 
 /* Header Section */
 .header {
-  background: url('img/wallpaper/therakaman.jpg') no-repeat center center/cover;
+  background: url('therakaman.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
