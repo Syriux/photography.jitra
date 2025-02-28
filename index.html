@@ -8,12 +8,93 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
 	<meta name="description"
 		content="Therakaman Photography menawarkan perkhidmatan fotografi profesional untuk perkahwinan, tunang, majlis nikah, OOTD, graduasi dan banyak lagi.">
 	<meta name="keywords"
 		content="fotografi perkahwinan, wedding photography, jurugambar profesional, Therakaman, fotografi tunang, majlis nikah, OOTD, fotografi graduasi, jurugambar event, fotografi anniversary">
 
 	<meta name="author" content="Therakaman Photography">
+	<style>
+		/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 20px; /* Space between items */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.list-portfolio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  gap: 20px;
+}
+
+.list-portfolio :hover{
+  color: #C0A080;
+}
+
+.portfolio-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Item Sizes */
+.portfolio-item.large {
+  grid-column: span 2; /* Takes 2 columns */
+  grid-row: span 2; /* Takes 2 rows */
+}
+
+.portfolio-item.medium {
+  grid-column: span 2; /* Takes 2 columns */
+  grid-row: span 1; /* Takes 1 row */
+}
+
+.portfolio-item.small {
+  grid-column: span 1; /* Takes 1 column */
+  grid-row: span 1; /* Takes 1 row */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+
+  .portfolio-item.large,
+  .portfolio-item.medium,
+  .portfolio-item.small {
+    grid-column: span 1; /* All items take 1 column on smaller screens */
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+	</style>
 </head>
 
 <body>
@@ -21,9 +102,11 @@
 <!-- Navigation Bar -->
 <div class="navbar">
 	<div class="nav-links" id="nav-links">
-		<div class="nav-button"><a href="portfolio.html">PORTFOLIO</a></div>
-		<div class="logo"><a href="index.html">TheRakaman.Photography</a></div>
-		<div class="nav-button"><a href="about.html">ABOUT</a></div>
+		<div class="nav-button"><a href="#home">HOME</a></div>
+		<div class="nav-button"><a href="#portfolio">PORTFOLIO</a></div>
+		<div class="nav-button"><a href="#package">PACKAGES</a></div>
+		<div class="nav-button"><a href="#contact">BOOKING</a></div>
+		<div class="nav-button"><a href="about.html">ABOUT ME</a></div>
 	</div>
 	<div class="hamburger" id="hamburger">
 		<span class="bar"></span>
@@ -41,6 +124,148 @@
 		</div>
 	</div>
 
+	<!-- Portfolio Section -->
+	<div class="section portfolio" id="portfolio">
+		<h2 style="font-size: 3rem;">GALLERY</h2>
+		<p class="portfolio-subtitle">Explore my work</p>
+		<div class="portfolio-grid">
+			<!-- Large Image -->
+			<div class="portfolio-item medium">
+				<img src="img/portfolio/wedding1.jpg" alt="Portfolio 1">
+			</div>
+			<!-- Small Image -->
+			<div class="portfolio-item small">
+				<img src="img/portfolio/wedding7.jpg" alt="Portfolio 2">
+			</div>
+			<!-- Small Images -->
+			<div class="portfolio-item small">
+				<img src="img/portfolio/wedding6.jpg" alt="Portfolio 3">
+			</div>
+			<div class="portfolio-item medium">
+				<img src="img/portfolio/wedding8.jpg" alt="Portfolio 4">
+			</div>
+			<div class="portfolio-item medium">
+				<img src="img/portfolio/wedding2.jpg" alt="Portfolio 5">
+			</div>
+		</div>
+		<div class="button-p">
+			<p><a href="gallery.html">See More</a></p>
+		</div>
+	</div>
+
+	<!-- Package Section -->
+	<div class="section-package" id="package">
+		<h2 style="font-size: 3rem; text-align: center;">PACKAGES</h2>
+		<p class="package-subtitle" style="text-align: center;">Choose Your Perfect Package</p>
+		<div class="package-grid">
+			<!-- Package 1 -->
+			<div class="package-item"><a href="#" data-image="img/package/1_rakaman_berduwa.png" class="see-more">
+				<img src="img/package/1_rakaman_berduwa.png" alt="Rakaman Berduwa Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Rakaman Berduwa</h3>
+					<p>"A timeless photography package for couples celebrating their akad, sanding, tandang, or
+						engagement."</p>
+				</div>
+			</div>
+			<!-- Package 2 -->
+			<div class="package-item"><a href="#" data-image="img/package/2_maharani.png" class="see-more">
+				<img src="img/package/2_maharani.png" alt="Maharani Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Maharani</h3>
+					<p>"Perfect for couples celebrating two events on the same day, ensuring every cherished moment is
+						beautifully captured."</p>
+				</div>
+			</div>
+			<!-- Package 3 -->
+			<div class="package-item"><a href="#" data-image="img/package/3_candra_senja.png" class="see-more">
+				<img src="img/package/3_candra_senja.png" alt="Candra Senja Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Candra Senja</h3>
+					<p>"Capture the magic of your special moments with our photography, perfect for intimate gatherings and ceremonies."</p>
+				</div>
+			</div>
+			<!-- Package 4 -->
+			<div class="package-item"><a href="#" data-image="img/package/4_jumantara.png" class="see-more">
+				<img src="img/package/4_jumantara.png" alt="Jumantara Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Jumantara</h3>
+					<p>"Ideal for capturing the essence of your special moments across multiple days."</p>
+				</div>
+			</div>
+			<!-- Package 5 -->
+			<div class="package-item"><a href="#" data-image="img/package/5_mahkota_berduwa.png" class="see-more">
+				<img src="img/package/5_mahkota_berduwa.png" alt="Mahkota Berduwa Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Mahkota Berduwa</h3>
+					<p>"It’s perfect for capturing every detail of your multi-event celebration."</p>
+				</div>
+			</div>
+			<!-- Package 6 -->
+			<div class="package-item"><a href="#" data-image="img/package/6_laksara.png" class="see-more">
+				<img src="img/package/6_laksara.png" alt="Laksara Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Laksara</h3>
+					<p>"Capture the magic of your Akad, Sanding, and Tandang with our photo and video package, preserving every moment in
+					stunning detail."</p>
+				</div>
+			</div>
+			<!-- Package 7 -->
+			<div class="package-item"><a href="#" data-image="img/package/7_supplementary.png" class="see-more">
+				<img src="img/package/7_supplementary.png" alt="Supplementary Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Supplementary</h3>
+					<p>"Enhance your photography with our customizable supplementary services, ensuring every moment is captured perfectly."</p>
+				</div>
+			</div>
+			<!-- Package 8 -->
+			<div class="package-item"><a href="#" data-image="img/package/8_photo_album.png" class="see-more">
+				<img src="img/package/8_photo_album.png" alt="Photo Album Package" class="package-image"></a>
+				<div class="package-details">
+					<h3>Photo Album</h3>
+					<p>"Preserve your memories with our elegant photo albums, perfect for showcasing life's special moments."</p>
+				</div>
+			</div>
+		</div>
+		<div class="note">
+			<h2>Terms and Conditions</h2>
+			<p>1. Full payment clients should be paid at least one day before the event start.<br>
+				2. Any cancellation after deposit or last minute, theRakaman photography will not return the
+				deposit.<br>
+				3. Unclear payment will lead to pictures removal completely after 1 month.<br>
+				4. Transportation will be charged if the location is outside of Jitra. (the charge will be depending on
+				the event location given)<br>
+				5. The soft copy of photo album layout will be send to the clients for approval via WhatsApp before any
+				printing is made. The client is only allowed to make (free one time changes). After one time
+				changes, any further adjustment on the photo layout/selection from the customer will cause a ditional
+				charge. (RM200 for any additional layout or change photos for second time)<br>
+				6. Once the layout and photo selection are proven by the client, the album will proceed for printing,
+				and we're not responsible for any errors after printing.<br>
+				7. Clients cannot request the RAW files of photos or videos.
+				8. The company will not be responsible for any issue related to the video collab package.<br>
+				9. If there is no response from the clients regarding the photo selection or any other matters related
+				after 10 working days from the date client received our phone, SMS or WhatsApp, the company is
+				not bound to keep the photos and will not be responsible on the delay and the safekeeping of the
+				photos.<br>
+				10. The company shall have the album within 30-60 working days from the date of last event. However,
+				this duration does not include weekends and public holidays. If delays happens, theRakaman photography
+				has the rights to adjust the delivery date to another date that will be informed later.<br>
+				11. In filing a complaint(s), clients are advised to write in via WhatsApp. Clients are not permitted to
+				express disappointment openly in their blog, network online community or anywhere that can
+				reach the public. A response to the complaint(s) will also be reverting in written form.<br>
+				12. For Promotional package, client are bound to follow theRakaman photography rules such as :<br>
+				a. Any ‘Free’ Services are not refundable or changeable with any other product unless by the approval
+				from theRakaman photography.<br>
+				b. No replacement or extension will be given for expired promotion.
+			</p>
+		</div>
+	</div>
+
+		<!-- Modal for Full Image -->
+		<div id="image-modal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modal-content" id="modal-image">
+		</div>
+
 	<!-- Contact Section -->
 	<div class="contact" id="contact">
 		<h2>CONTACT ME</h2>
@@ -48,7 +273,7 @@
 		<div class="contact-button">
 			<a
 				href="https://whatsform.com/tZBJ1w?fbclid=PAZXh0bgNhZW0CMTEAAaaytILwdkuMuy_pyTvDSlvEj67XECW0SggY7R-OsngXCIYyTWrMf2FzSq8_aem_t4Gz84as5e3GcJ-I30UVbQ">
-				<button class="button-1" role="button">Book Your Session Now</button>
+				<button class="button-63" role="button">Book Your Session Now</button>
 			</a>
 		</div>
 	</div>
@@ -71,11 +296,13 @@
 	</div>
 
 
-
-
-
 	<script src="navbar.js"></script>
+	<script src="package.js"></script>
+
 
 </body>
 
 </html>
+
+
+
